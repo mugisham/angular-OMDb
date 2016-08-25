@@ -1,7 +1,7 @@
 {
   "name": "Angular dashboard",
   "description": "Angular 1.X dash",
-  "main": "index.php",
+  "main": "index.html",
   "keywords": [
     "bower",
     "bootstrap",
