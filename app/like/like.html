@@ -1,0 +1,29 @@
+<div ng-controller="LikeCtrl">
+
+  <br>
+  <button type="button" class="btn btn-default btn-sm" blur ng-click="clearLikes()">
+    <span class="glyphicon glyphicon-trash"></span> Clear Like List
+  </button>
+  <hr/>
+
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="movie in likestack" >
+      <a href="#/home/detail/{{movie.imdbID}}">
+        <div class ="row">
+          <div class="col-xs-8" >
+            <h5> {{movie.Title}} </h5>
+            <p> {{movie.Year}} <p>
+            </div>
+          </a>
+          <div class="col-xs-1" >
+            <button type="button" class="btn btn-default btn-sm " blur ng-click="deleteMovie($index)">
+              <span class="glyphicon glyphicon-trash"></span> Delete Movie
+            </button>
+          </div>
+        </div>
+      </li> 
+    </ul>
+
+
+  </div>
+

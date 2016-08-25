@@ -1,0 +1,60 @@
+<div ng-hide="movie.Error" >
+	<i class="fa fa-spinner fa-spin" ng-hide="true" style="font-size:24px"></i>
+	<div class= "panel panel-default">
+		<div class="panel-heading">
+			<h4>{{movie.Title}}</h4>
+			<button  blur class="btn btn-default btn-lg pull-right" ng-click="like(movie)"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+		</div>
+		<div class="panel-body">
+			<div class ="row">
+				<div class="col-sm-3">
+					<h5> Release Date: {{movie.Released}}</h5>
+					<h5> Rating: {{movie.Rated}} </h5>
+					<h5> Director: {{movie.Director}}</h5>
+					<h5>Writer: {{movie.Writer}}</h5>
+				</div>
+				<div class="col-sm-3">
+					<h5>Runtime: {{movie.Runtime}}</h5>
+					<h5>Genre: {{movie.Genre}}</h5>
+					<h5>Language: {{movie.Language}}</h5>
+					<h5>Country: {{movie.Country}}</h5>
+				</div>
+				<div class="col-sm-3">
+					<h5>imdbRating: <i class="fa fa-star-o" aria-hidden="true"></i> {{movie.imdbRating}}</h5>
+					<h5>imdbVotes: {{movie.imdbVotes}}</h5>
+					<h5>imdbID: {{movie.imdbID}}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class= "well">
+		<div class ="row">
+			<div class="col-sm-6">
+				<img ng-src="{{movie.Poster}}" class = "img-responsive img-rounded" style="max-height: 45vh">
+			</div>
+			<div class="col-sm-6">
+				<h4>Plot: </h4>
+				<p>{{movie.Plot}} </p>
+				<hr>
+				<h4>Awards</h4>
+				<p>{{movie.Awards}}</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div ng-show="movie.Error">
+	<div class= "well">
+		<p>Cmon bruh, type atleast one key word in the title and hit enter</p>
+		<img ng-src="http://www.mememaker.net/static/images/memes/1824923.jpg">
+	</div>
+
+
+</div>

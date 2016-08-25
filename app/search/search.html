@@ -1,0 +1,21 @@
+<div ng-controller="SearchCtrl">
+	<input type="text" class="form-control" placeholder="Star Wars or tt2488496" ng-model="movieTitle" ng-enter="getMovie()" style= "margin-top:10px">
+	<br>
+
+	<div class="list-group" ng-show="movieList">
+		<a href="#/home/detail/{{movie.imdbID}}"  ng-repeat="movie in movieList" class="list-group-item">
+			<div class ="row">
+				<div class="col-xs-3" >
+					<img class="img-rounded img-responsive" ng-src="{{movie.Poster}}" style="width:80px;height:80px">
+				</div>
+				<div class="col-xs-6" >
+					<h5> {{movie.Title}} </h5>
+					<p> {{movie.Year}} <p>
+					</div>
+				</div>
+			</a>
+			<a href="" ng-click="getMoreMovies(page)"  class="list-group-item" ng-show =!lastPage>  
+				<span class="glyphicon glyphicon-plus">
+				</span> More </a>
+			</div>
+		</div>

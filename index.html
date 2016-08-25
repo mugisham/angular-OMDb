@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+  <title>OMDb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/toastr/toastr.js"></script>
+
+ <link rel="stylesheet" href="app/app.css">
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+ <script type="text/javascript" src="app/app.js"></script>
+ <script type="text/javascript" src="app/appRoute.js"></script>
+ <script type="text/javascript" src="app/common/common.js"></script>
+
+  <script type="text/javascript" src="app/home/HomeCtrl.js"></script> 
+
+ <script type="text/javascript" src="app/search/SearchCtrl.js"></script> 
+ <script type="text/javascript" src="app/search/SearchService.js"></script> 
+
+<script type="text/javascript" src="app/detail/DetailCtrl.js"></script> 
+<script type="text/javascript" src="app/detail/MovieDetailDirective.js"></script> 
+
+<script type="text/javascript" src="app/like/LikeCtrl.js"></script>  
+<script type="text/javascript" src="app/like/LikeService.js"></script> 
+
+<script type="text/javascript" src="app/history/HistoryService.js"></script> 
+<script type="text/javascript" src="app/history/HistoryCtrl.js"></script> 
+</head>
+
+<body class="container-fluid">
+	 <div ui-view></div>
+</body>
+</html>

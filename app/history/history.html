@@ -1,0 +1,26 @@
+<div ng-controller="HistoryCtrl">
+	<br>
+	<button type="button" class="btn btn-default btn-sm" ng-click="deleteHistory()" blur>
+		<span class="glyphicon glyphicon-trash"></span> Delete History
+	</button>
+	<hr/>
+
+
+	<div class="list-group">
+		<a href="#/home/detail/{{movie.imdbID}}" ng-repeat="movie in historyStack | orderBy:'-TimeOfSearch'" class="list-group-item" >
+			<div class ="row">
+				<div class="col-xs-6" >
+					<h5> {{movie.Title}} </h5>
+					<p> {{movie.Year}} <p>
+					</div>
+					<div class="col-xs-3" >
+						<p>{{movie.TimeOfSearch | date: "medium"}}</p>
+					</div>
+				</div>
+			</a>
+		</div>
+
+
+
+	</div>
+
